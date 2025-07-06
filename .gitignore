@@ -192,3 +192,8 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Data folders
+.ais_csv_data/
+.ais_downloaded_data/
+.ais_data/

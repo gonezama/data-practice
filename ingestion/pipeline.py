@@ -20,7 +20,7 @@ def main_pipeline(download_output_dir, csv_output_dir, parquet_output_dir):
             lazy_csv_to_parquet(
                 extracted_csv,
                 output_path=parquet_output_dir,
-                datetime_col="Timestamp",
+                datetime_col="# Timestamp",
                 dt_format="%d/%m/%Y %H:%M:%S",
             )
 

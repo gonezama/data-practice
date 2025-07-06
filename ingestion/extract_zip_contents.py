@@ -5,6 +5,7 @@ from loguru import logger
 
 def extract_zip(local_zip_path: str, output_dir: str):
     os.makedirs(output_dir, exist_ok=True)
+    
     with zipfile.ZipFile(local_zip_path, "r") as zip_ref:
         zip_ref.extractall(output_dir)
         logger.info(f"Extracted to: {output_dir}")
