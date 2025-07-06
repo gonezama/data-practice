@@ -194,6 +194,6 @@ cython_debug/
 .cursorindexingignore
 
 # Data folders
-.ais_csv_data/
-.ais_downloaded_data/
-.ais_data/
+ais_csv_data/
+ais_downloaded_data/
+ais_data/
