@@ -1,0 +1,6 @@
+loguru
+requests
+beautifulsoup4
+fire
+pydantic
+polars
