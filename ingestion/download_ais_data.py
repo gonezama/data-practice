@@ -3,11 +3,11 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from loguru import logger
 
-import zipfile
 import os
 import re
 from datetime import datetime
 
+from utils.check_if_date_is_already_processed import check_if_date_is_already_processed
 
 def download_ais_data(
     start_date: str = None,
@@ -53,6 +53,9 @@ def download_ais_data(
                 if (start_dt is None or file_date >= start_dt) and (
                     end_dt is None or file_date <= end_dt
                 ):
+                    if check_if_date_is_already_processed(date_str=file_date.strftime("%Y-%m-%d"), output_path='ais_data'):
+                        logger.info(f"{file_date.strftime("%Y-%m-%d")} data is already available as parquet")
+                        continue
                     url = urljoin(BASE_URL, href)
                     logger.info(f"Downloading monthly file: {url}")
                     output_path = download_zip(url, output_dir)
@@ -69,6 +72,10 @@ def download_ais_data(
                 if (start_dt is None or file_date >= start_dt) and (
                     end_dt is None or file_date <= end_dt
                 ):
+                    if check_if_date_is_already_processed(date_str=file_date.strftime("%Y-%m-%d"), output_path='ais_data'):
+                        logger.info(f"{file_date.strftime("%Y-%m-%d")} data is already available as parquet")
+                        continue
+
                     url = urljoin(BASE_URL, href)
                     logger.info(f"Downloading daily file: {url}")
                     output_path = download_zip(url, output_dir)
