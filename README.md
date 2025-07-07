@@ -1,6 +1,6 @@
-# dbt-practice
+# data-practice
 
-A dbt practice project with toy data, inspired by [this data engineering project video](https://www.youtube.com/watch?v=3pLKTmdWDXk&t=1s). The video demonstrates many good practices and procedures, though this repo adapts and changes some elements.
+A data engineering practice project with toy data, inspired by [this data engineering project video](https://www.youtube.com/watch?v=3pLKTmdWDXk&t=1s). The video demonstrates many good practices and procedures, though this repo adapts and changes some elements in order to experiment with other tools.
 
 ## Requirements
 
@@ -30,5 +30,4 @@ Data is sourced from: https://web.ais.dk/aisdata/
 
 
 ## ToDos
-[] Build a lazyframe validation
-[] Deal with string named columns
+[] Build a lazyframe validation to deal with unconventional columns names
