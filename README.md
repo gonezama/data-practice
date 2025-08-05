@@ -29,5 +29,12 @@ Data is sourced from: https://web.ais.dk/aisdata/
 `tests/`: Pytest-based tests for ingestion logic.
 
 
+# Ingestion
+
+## Run Ingest:
+```bash
+make run-ingest start_date="2025-01-01" end_date="2025-01-01"
+``
+
 ## ToDos
 [] Build a lazyframe validation to deal with unconventional columns names

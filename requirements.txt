@@ -4,3 +4,5 @@ beautifulsoup4
 fire
 pydantic
 polars
+dbt-core
+dbt-duckdb
