@@ -5,4 +5,4 @@ ifneq ("$(wildcard .env)", "")
 endif
 
 run-ingest:
-	python -m ingestion.pipeline $(foreach v,$(MAKEFLAGS),$(if $(findstring =,$(v)),--$(subst =, ,$(v))))
+	python -m ingestion.download_bcra_database $(foreach v,$(MAKEFLAGS),$(if $(findstring =,$(v)),--$(subst =, ,$(v))))

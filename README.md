@@ -20,21 +20,19 @@ pip install -r requirements.txt
 
 # Data Source
 
-Data is sourced from: https://web.ais.dk/aisdata/
+Data is sourced: "https://www.bcra.gob.ar/Pdfs/PublicacionesEstadisticas/historico-relevamiento-expectativas-mercado.xlsx"
 
 # Project Structure
 
-`ingestion/`: Scripts to download, extract, and process AIS data.
-`utils/`: Utility scripts (e.g., file path helpers).
-`tests/`: Pytest-based tests for ingestion logic.
-
+`ingestion/`: Scripts to download, extract, and save into duckdb database.
 
 # Ingestion
 
 ## Run Ingest:
 ```bash
-make run-ingest start_date="2025-01-01" end_date="2025-01-01"
-``
+make run-ingest
+```
 
-## ToDos
-[] Build a lazyframe validation to deal with unconventional columns names
+## Notes
+
+Had to change source since other source (Denmark AIS data) was shutdown.
